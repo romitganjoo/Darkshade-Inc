@@ -1,0 +1,71 @@
+# items=[[50,40,90,120,10,200],[40,50,25,100,30,45]]
+# w = 10
+# ratio = []
+# vsum = 0
+
+# print(items)
+# items= sorted(items,key=lambda x: x[1]/x[0])
+# print(items)
+
+# # for i in range(len(items[0])):
+# #      ratio.append([items[1][i]/items[0][i],i])
+
+# # ratio = sorted(ratio, key=lambda x:-x[0])
+
+
+
+# # i=0
+# # while w>0:
+# #     if(w-(items[0][(ratio[1][i])])>=0):
+
+# #         w -= ((1/ratio[0][i])*items[1][ratio[1][i]])
+# #         vsum += (ratio[0][i]*items[0][ratio[1][i]])
+# #         print(vsum)
+# #     else:
+# #         continue
+# #     i += 1
+
+# denominations = [1, 2, 5, 10, 20, 50, 100, 500, 1000]
+
+
+# amount = 40
+
+# denominations = sorted(denominations, reverse= True)
+# i = 0
+# count = 0
+# curr = 0
+# while amount>=0 and i< len(denominations):
+#     curr = denominations[i]
+#     if curr <= amount:
+#         amount -= curr
+#         #print("amount:",amount)
+#         count+= 1
+#         #print("count",count)
+#         i += 1
+#     else:
+#         i += 1
+
+# print(count)
+
+
+res = []
+def func(num, ind, sum):
+    if ind == len(num):
+        res.append(sum)
+        return
+    
+    func(num, ind+1, sum+num[ind])
+    func(num, ind+1, sum)
+        
+
+def subsetSum(num):
+    func(num, 0, 0)
+    ans = sorted(res)
+    
+    return ans
+
+num = [4,1,3]
+ans = subsetSum(num)
+print(res)
+print(ans)
+

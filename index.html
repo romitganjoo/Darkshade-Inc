@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        Online Marketing
+        </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header> 
+            <a href="index.html" class=logo>Darkshade Inc.</a>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contacts.php">Contacts</a></li>
+                <li><a href="password.html">Admin Login</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h5 id="text">Darkshade Inc.</h5>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front"> 
+        </section>
+        <div class="sec" id="sec">
+            <h2>Description</h2>
+            <p>At Darkshade Inc., every product we make is built to last. We provide durable, 
+                easy-to-use software solutions with innovative features that customers depend on, 
+                all while protecting their privacy and data. Customers should have access to safe, 
+                reliable, and secure solutions with genuine support if they need them. 
+                Technology is transforming work in just about every sector of the global economy—and
+                while these advances have created unparalleled opportunities for many, far too few have
+                access to the quality education, training and job opportunities required to improve their
+                economic and social mobility in a changing landscape. <br><br>
+
+                Darkshade Inc. organization addresses the need to ensure all communities are prepared for the
+                jobs driving the future, and to date has awarded approximately $65 million to support more 
+                than 70 organizations working to inspire, educate and prepare people of all ages to succeed 
+                in the workforce of today and tomorrow.
+
+                We partner with our grantees to rethink the pathways into and through the tech sector, grow
+                more diverse talent pipelines and fundamentally reimagine the education and workforce systems 
+                in which we operate—and while our work is far from over, we are proud of the positive impact our 
+                investments have made since the foundation was established in 2018. </p><br>
+                
+                <p><p>
+                    We're leveraging the power of digital technology to amplify our impact and
+                    do more good in the world. Building on our longstanding investments in corporate social 
+                    responsibility, we've committed to a five-year, $250 million effort to advance economic 
+                    mobility, educational opportunity, health and well-being in communities around the globe.
+
+                    We've also launched new diversity and inclusion programs in partnership with our employee 
+                    affinities—supporting African American, Latinx, LGBTQ, Pan-Asian, women and veteran communities—to 
+                    create true social change. <br><br>
+                </p> </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header')
+            
+            window.addEventListener('scroll', function(){
+                let value= window.scrollY
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value + 'px';
+                mountains_behind.style.top = value * 0.5+ 'px';
+                mountains_front.style.top = value *0+ 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+                })
+        </script>
+    </body>
+</html>
